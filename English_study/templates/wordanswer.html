@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="contents">
+<h2>問題:{{question}}の意味は？</h2>
+</div>
+<div id="middle">
+<div class="side">
+    <form method="POST">
+        <p><label for="answer">解答:</label><input type="text" name="answer"></p>
+        <p><input type="submit" value="送信"></p>
+    </form>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+</div>
+{% endblock %}

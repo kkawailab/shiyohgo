@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="contents">
+<h2>よくできました</h2>
+</div>
+<div id="middle">
+<div class="side">
+    <img src="../static/image/maru.png">
+    <a href="/selectanswer" role="button">次の問題</a>
+    <a href="/result" role="button">終了</a>
+    <a href="/" role="button"onclick="return confirm('本当に終了しますか？結果は保存されません。')">ホーム</a>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+</div>
+{% endblock %}

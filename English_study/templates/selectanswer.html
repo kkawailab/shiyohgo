@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="contents">
+<h2>内容表示</h2>
+<p>{{selectans.question}}</p>
+</div>
+<div id="middle">
+<div class="side">
+<form method="POST">
+    <p><input type="radio" name="answer" id="r1" value="true"><label for="r1">{{selectans.answer}}</label></p>
+    <p><input type="radio" name="answer" id="r2" value="false1"><label for="r2">{{selectans.dummy_answer1}}</label></p>
+    <p><input type="radio" name="answer" id="r3" value="false2"><label for="r3">{{selectans.dummy_answer2}}</label></p>
+    <p><input type="radio" name="answer" id="r4" value="false3"><label for="r4">{{selectans.dummy_answer3}}</label></p>
+    <p><input type="submit" value="送信"></p>
+</form>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+{% endblock %}

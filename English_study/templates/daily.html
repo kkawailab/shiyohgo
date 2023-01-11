@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="middle">
+<div class="side">
+<table border="1">
+    <tr>
+        <th>日付</th>
+        <th>総問題数</th>
+        <th>正答率</th>
+    </tr>
+    {% for list in tbl %}
+    <tr>
+        <td>{{list[0]}}</td>
+        <td>{{list[1]}}問</td>
+        <td>{{list[2]}}%</td>
+    </tr> 
+    {% endfor %}
+</table>
+<a href="/" role="button">ホーム</a>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+{% endblock %}

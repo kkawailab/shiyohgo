@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="contents">
+<h2>問題作成</h2>
+<p>下から問題形式を選択してください。</p>
+</div>
+<div id="middle">
+<div class="side">
+<select onChange="location.href=value;">
+    <option value="">選んでください</option>
+    <option value="/select">四択問題</option>
+    <option value="/word">単語問題</option>
+</select>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+{% endblock %}

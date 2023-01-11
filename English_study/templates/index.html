@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="contents">
+<h2>問題作成か解答か選んでください</h2>
+</div>
+<div id="middle">
+<div class="side">
+    <select onChange="location.href=value;">
+        <option value="">選んでください</option>
+        <option value="/make">問題作成</option>
+        <option value="/answer">問題解答</option>
+    </select>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="contents">
+<h2>四択問題作成</h2>
+<p>下に問題と解答選択肢を入力し、送信をクリックしてください。</p>
+</div>
+<div id="middle">
+<div class="side">
+<form method="POST">
+    <p><label for="question">問題</label><input type="text" name="question"></p>
+    <p><label for="answer">正答</label><input type="text" name="answer"></p>
+    <p><label for="dummy_answer1">ダミー解答1</label><input type="text" name="dummy_answer1"></p>
+    <p><label for="dummy_answer2">ダミー解答2</label><input type="text" name="dummy_answer2"></p>
+    <p><label for="dummy_answer3">ダミー解答3</label><input type="text" name="dummy_answer3"></p>
+    <p><input type="submit" value="送信"></p>
+</form>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+{% endblock %}

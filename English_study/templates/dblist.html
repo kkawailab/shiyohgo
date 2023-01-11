@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="middle">
+<div class="side">
+<table border="1">       
+    <tr>
+        <th>問題</th>
+        <th>正答</th>
+        <th>ダミー解答1</th>
+        <th>ダミー解答2</th>
+        <th>ダミー解答3</th>
+        <th></th>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td>{{post.question}}</td>
+        <td>{{post.answer}}</td>
+        <td>{{post.dummy_answer1}}</td>
+        <td>{{post.dummy_answer2}}</td>
+        <td>{{post.dummy_answer3}}</td>
+        <th><a href="/{{post.id}}/update" role="button">編集</a></th>
+    </tr>
+    
+    {% endfor %}
+</table>
+
+<a href="/select" role="button">続いて問題を作成。</a>
+<a href="/" role="button">ホーム</a>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content%}
+<div id="middle">
+<div class="side">
+<table border="1">
+    <tr>
+        <th>単語</th>
+        <th>意味</th>
+        <th></th>
+    </tr>
+    {% for list in tbl %}
+    <tr>
+        <td>{{list[0]}}</td>
+        <td>{{list[1]}}</td>
+        <td><a href="/{{ind[loop.index0]}}/worddelete" role="button"onclick="return confirm('本当に削除しますか？')">削除</a></td>
+    </tr> 
+    {% endfor %}
+</table>
+<a href="/word" role="button">続いて問題を作成。</a>
+<a href="/" role="button">ホーム</a>
+</div>
+</div>
+<div id="footer">2022 オリジナル英語問題集</div>
+{% endblock %}

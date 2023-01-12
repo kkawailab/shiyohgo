@@ -127,6 +127,11 @@ def word():
     else:
         return render_template('word.html')
 
+@app.route('/wordlist')
+def wordlist():
+    df = pd.read_csv('words.csv',index_col=0)
+    return render_template('wordslist.html', tbl=df.values.tolist(), ind=df.index.tolist())
+
 @app.route('/<int:id>/worddelete', methods=['GET'])
 def worddelete(id):
     df2 = pd.read_csv('words.csv',index_col=0)
